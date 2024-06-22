@@ -34,6 +34,6 @@ jobs:
           '
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ORGANIZATION: ${{ github.actor }}
+          ORGANIZATION: sfbarragan845
           REPOSITORY: ${{ github.event.repository.name }}
           ISSUE_NUMBER: ${{ github.event.issue.number}}
