@@ -3,7 +3,9 @@ name: Create a comment on new issues
 on:
   issues:
     types: [opened]
-
+permissions:
+  issues: write
+  
 jobs:
   comment-with-action:
     runs-on: ubuntu-latest
