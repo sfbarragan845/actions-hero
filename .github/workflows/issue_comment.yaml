@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "dump github context"
-        run: echo '${{ toJSON(github.event.user)}}'  | jq
+        run: echo '${{ toJSON(github.event)}}'  | jq
         shell: bash
       # - name: Create comment
       #   uses: peter-evans/create-or-update-comment@v3
@@ -34,6 +34,6 @@ jobs:
           '
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ORGANIZATION: ${{ github.event.user.login }}
+          ORGANIZATION: ${{ github.actor }}
           REPOSITORY: ${{ github.event.repository.name }}
           ISSUE_NUMBER: ${{ github.event.issue.number}}
